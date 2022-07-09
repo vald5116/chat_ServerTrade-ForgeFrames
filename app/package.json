@@ -1,0 +1,61 @@
+{
+  "name": "ark-hoster",
+  "version": "1.0.0",
+  "description": "My Moleculer-based microservices project",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services/**/*.service.js",
+    "start": "moleculer-runner",
+    "cli": "moleculer connect AMQP",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "jest": "^27.1.0",
+    "jest-cli": "^27.1.0",
+    "moleculer-repl": "^0.6.6"
+  },
+  "dependencies": {
+    "@moleculer/lab": "^0.6.2",
+    "amqplib": "^0.7.0",
+    "bcryptjs": "^2.4.3",
+    "geoip-lite": "^1.4.5",
+    "ioredis": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "moleculer": "^0.14.21",
+    "moleculer-bee-queue": "^0.1.9",
+    "moleculer-db": "^0.8.17",
+    "moleculer-db-adapter-sequelize": "^0.2.13",
+    "moleculer-web": "^0.10.4",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^3.2.4",
+    "nodemailer": "^6.7.5",
+    "notp": "^2.0.3",
+    "redlock": "^4.0.0",
+    "request-promise": "^4.2.6",
+    "sha1": "^1.1.1",
+    "sha256": "^0.2.0",
+    "thirty-two": "^1.0.2",
+    "node-ssh":"^12.0.4",
+    "node-telegram-bot-api":"^0.57.0"
+  },
+  "engines": {
+    "node": ">= 12.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}
