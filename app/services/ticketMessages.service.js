@@ -1,8 +1,7 @@
 
 const
 	QueueService = require("moleculer-bee-queue"),
-	{MoleculerClientError} = require("moleculer").Errors,
-	CacheCleanerMixin = require("../mixins/cache.cleaner.mixin");
+	{MoleculerClientError} = require("moleculer").Errors;
 let id = 0
 let chat = [];
 
